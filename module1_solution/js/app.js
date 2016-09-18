@@ -21,7 +21,7 @@ function LunchCheckController($scope) {
     function numberOfDishes(dishes){
         return dishes
             .split(",")
-            .filter(function(s){ return s.length != 0}) // do not count empty items
+            .filter(function(s){ return s.trim().length != 0}) // do not count empty items
             .length;
     }
 }
